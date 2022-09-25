@@ -3,6 +3,7 @@
 Geometry Shape Calculator is a website where you can calculate two-dimensional and three-dimensional shapes.
 
 - Figma URL: [https://www.figma.com/file/S4TNJwAuJCALMkHuDgtGB7/Geometry-Shape-Calculator?node-id=0%3A1](https://www.figma.com/file/S4TNJwAuJCALMkHuDgtGB7/Geometry-Shape-Calculator?node-id=0%3A1)
+- Live Preview: [https://geometry-shape-calculator.netlify.app/](https://geometry-shape-calculator.netlify.app/)
 
 ## Features
 
