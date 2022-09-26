@@ -9,13 +9,13 @@ Geometry Shape Calculator is a website where you can calculate two-dimensional a
 
 ### Two-dimensional Shape
 
-- Calculate the perimeter and area of a rectangle
+- Calculate the perimeter and area of a square
 - Calculate the perimeter and area of a circle
 
 ### Three-dimensional Shape
 
 - Calculate the surface area and volume of a cube
-- Calculate the surface area and volume of a ball
+- Calculate the surface area and volume of a sphere
 
 ## Authors
 
