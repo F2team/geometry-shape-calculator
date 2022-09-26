@@ -43,6 +43,9 @@ body {
   padding: 5vh;
   text-decoration: none;
   transition: all 0.4s ease-out;
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -64,6 +67,20 @@ body {
 
 .card-title {
   font-size: 24;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body .card-title {
+  text-align: center;
+  font-size: 60px;
   font-weight: 600;
   color: var(--color-dark-blue);
 }
