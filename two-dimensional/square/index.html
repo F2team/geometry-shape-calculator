@@ -9,7 +9,36 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
-    <h1>Square Calculator</h1>
+    <h1 class="title-page">Square Calculator</h1>
+    <div class="calculate-container">
+      <form class="form-container">
+        <h2 class="form-title">Input:</h2>
+        <label for="length-of-square"> enter length of the square: </label>
+        <input
+          type="number"
+          id="length-of-square"
+          placeholder="Length...."
+          required
+        />
+        <div>
+          <button class="form-button" type="submit">Calculate</button>
+        </div>
+      </form>
+      <div class="result-container">
+        <div class="result-img-container">
+          <img src="/assets/images/square-detail.png" alt="Square" />
+        </div>
+        <h3>Result:</h3>
+        <div class="result">
+          <p>The Area of square is:</p>
+          <h4 id="area"></h4>
+        </div>
+        <div class="result">
+          <p>The perimeter of square is:</p>
+          <h4 id="perimeter"></h4>
+        </div>
+      </div>
+    </div>
     <script src="/two-dimensional/square/index.js"></script>
   </body>
 </html>
