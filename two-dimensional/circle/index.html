@@ -10,6 +10,35 @@
   </head>
   <body>
     <h1>Circle Calculator</h1>
+    <div class="calculate-container">
+      <form class="form-container">
+        <h2 class="form-title">Input:</h2>
+        <label for="radius-of-circle"> enter radius of circle: </label>
+        <input
+          type="number"
+          id="radius-of-circle"
+          placeholder="Input radius of the circle..."
+          required
+        />
+        <div>
+          <button class="form-button" type="submit">Calculate</button>
+        </div>
+      </form>
+      <div class="result-container">
+        <div class="result-img-container">
+          <img src="" alt="Circle" />
+        </div>
+        <h3>Result:</h3>
+        <div class="result">
+          <p>The Area of circle is:</p>
+          <h4 id="area"></h4>
+        </div>
+        <div class="result">
+          <p>The Circumfere of circle is:</p>
+          <h4 id="circumference"></h4>
+        </div>
+      </div>
+    </div>
     <script src="/two-dimensional/circle/index.js"></script>
   </body>
 </html>
