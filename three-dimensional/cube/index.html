@@ -9,7 +9,31 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
-    <h1>Cube Calculator</h1>
+    <h1 class="title-page">Cube Calculator</h1>
+    <div class="calculate-container">
+      <form class="form-container">
+        <h2 class="form-title">Input:</h2>
+        <label for="length-of-cube"> enter length of the square: </label>
+        <input type="number" id="length-of-cube" placeholder="Length...." />
+        <div>
+          <button class="form-button" type="submit">Calculate</button>
+        </div>
+      </form>
+      <div class="result-container">
+        <div class="result-img-container">
+          <!-- CODE_IMAGE_HERE -->
+        </div>
+        <h3>Result:</h3>
+        <div class="result">
+          <p>The volume of cube is:</p>
+          <h4 id="volume"></h4>
+        </div>
+        <div class="result">
+          <p>The surface area of cube is:</p>
+          <h4 id="surface-area"></h4>
+        </div>
+      </div>
+    </div>
     <script src="/three-dimensional/cube/index.js"></script>
   </body>
 </html>
