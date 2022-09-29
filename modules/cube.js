@@ -1,5 +1,5 @@
 export function calculateCubeSurfaceArea(lengthOfCube) {
-  if (!(lengthOfCube > 0)) {
+  if (lengthOfCube <= 0) {
     throw new Error("Length of cube must be over 0");
   }
 
@@ -7,7 +7,7 @@ export function calculateCubeSurfaceArea(lengthOfCube) {
 }
 
 export function calculateCubeVolume(lengthOfCube) {
-  if (!(lengthOfCube > 0)) {
+  if (lengthOfCube <= 0) {
     throw new Error("Length of cube must be over 0");
   }
 
