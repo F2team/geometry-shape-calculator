@@ -1,12 +1,4 @@
 export function calculateCubeSurfaceArea(lengthOfCube) {
-  if (!lengthOfCube) {
-    throw new Error("Length of cube is required");
-  }
-
-  if (typeof lengthOfCube !== "number") {
-    throw new Error("Length of cube must be number");
-  }
-
   if (!(lengthOfCube > 0)) {
     throw new Error("Lenght of cube must be over 0");
   }
@@ -15,14 +7,6 @@ export function calculateCubeSurfaceArea(lengthOfCube) {
 }
 
 export function calculateCubeVolume(lengthOfCube) {
-  if (!lengthOfCube) {
-    throw new Error("Length of cube is required");
-  }
-
-  if (typeof lengthOfCube !== "number") {
-    throw new Error("Length of cube must number");
-  }
-
   if (!(lengthOfCube > 0)) {
     throw new Error("Lenght of cube must be over 0");
   }
