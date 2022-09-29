@@ -1,21 +1,36 @@
-const lengthOfCube = document.querySelector("#length-of-cube");
+import { calculateCubeSurfaceArea, calculateCubeVolume } from "./../../modules/cube.js";
+
 const volumeOfCube = document.querySelector("#volume");
 const surfaceAreaOfCube = document.querySelector("#surface-area");
 const formElement = document.querySelector('form');
 
-function calculateSurfaceArea(lengthOfCube) {
-  return 6 * (lengthOfCube * 2);
+const insertResultOfCalculateCubeSurfaceAreaToDOM = (lengthOfCube) => {
+  try {
+    const resultCalculateCubeSurfaceArea = calculateCubeSurfaceArea(lengthOfCube);
+
+    surfaceAreaOfCube.innerText = resultCalculateCubeSurfaceArea;
+  } catch (error) {
+    console.error(error)
+    surfaceAreaOfCube.innerHTML = "";
+  }
 }
 
-function calculateVolume(lengthOfCube) {
-  return lengthOfCube ** 3;
+const insertResultOfCalculateCubeVolumeToDOM = (lengthOfCube) => {
+  try {
+    const resultCalculateCubeVolume = calculateCubeVolume(lengthOfCube);
+
+    volumeOfCube.innerText = resultCalculateCubeVolume;
+  } catch (error) {
+    console.error(error)
+    volumeOfCube.innerHTML = "";
+  }
 }
 
 formElement.addEventListener('submit', (event) => {
   event.preventDefault();
-  const resultCalculateSurfaceArea = calculateSurfaceArea(lengthOfCube.value);
-  const resultCalculateVolume = calculateVolume(lengthOfCube.value);
+  const lengthOfCube = Number(document.querySelector("#length-of-cube").value)
 
-  volumeOfCube.innerText = resultCalculateVolume;
-  surfaceAreaOfCube.innerText = resultCalculateSurfaceArea;
+  insertResultOfCalculateCubeSurfaceAreaToDOM(lengthOfCube);
+
+  insertResultOfCalculateCubeVolumeToDOM(lengthOfCube);
 });
