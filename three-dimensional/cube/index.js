@@ -3,41 +3,44 @@ import {
   calculateCubeVolume,
 } from "../../modules/cube.js";
 
-const volumeOfCube = document.querySelector("#volume");
-const surfaceAreaOfCube = document.querySelector("#surface-area");
-const textError = document.querySelector(".error");
+const sideLengthElement = document.getElementById("length-of-cube");
+const cubeVolumeElement = document.getElementById("volume");
+const cubeSurfaceAreaElement = document.getElementById("surface-area");
+const textErrorElement = document.getElementById('error');
 const formElement = document.querySelector("form");
 
-const insertResultOfCalculateCubeSurfaceAreaToDOM = (lengthOfCube) => {
+const appendResultCubeSurfaceArea = (sideLength) => {
   try {
-    const resultCalculateCubeSurfaceArea =
-      calculateCubeSurfaceArea(lengthOfCube);
+    const resultCubeSurfaceArea =
+      calculateCubeSurfaceArea(sideLength);
 
-    surfaceAreaOfCube.innerText = resultCalculateCubeSurfaceArea;
-    textError.innerText = "";
+    cubeSurfaceAreaElement.innerText = resultCubeSurfaceArea;
+    textErrorElement.innerText = "";
   } catch (error) {
-    textError.innerText = error.message;
-    surfaceAreaOfCube.innerHTML = "";
+    textErrorElement.innerText = error.message;
+    cubeSurfaceAreaElement.innerHTML = "";
   }
 };
 
-const insertResultOfCalculateCubeVolumeToDOM = (lengthOfCube) => {
+const appendResultCubeVolume = (sideLength) => {
   try {
-    const resultCalculateCubeVolume = calculateCubeVolume(lengthOfCube);
+    const resultCubeVolume = calculateCubeVolume(sideLength);
 
-    volumeOfCube.innerText = resultCalculateCubeVolume;
-    textError.innerText = "";
+    cubeVolumeElement.innerText = resultCubeVolume;
+    textErrorElement.innerText = "";
   } catch (error) {
-    textError.innerText = error.message;
-    volumeOfCube.innerHTML = "";
+    textErrorElement.innerText = error.message;
+    cubeVolumeElement.innerHTML = "";
   }
 };
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
-  const lengthOfCube = Number(document.querySelector("#length-of-cube").value);
 
-  insertResultOfCalculateCubeSurfaceAreaToDOM(lengthOfCube);
+  //Get form input
+  const sideLength = sideLengthElement.valueAsNumber;
 
-  insertResultOfCalculateCubeVolumeToDOM(lengthOfCube);
+  //Append result to the DOM
+  appendResultCubeSurfaceArea(sideLength);
+  appendResultCubeVolume(sideLength);
 });
