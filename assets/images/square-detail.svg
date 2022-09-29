@@ -1,0 +1,54 @@
+<svg height="148px" version="1.1" viewBox="0 0 474 296" width="237px" x="0px" xml:space="preserve"
+  xmlns="http://www.w3.org/2000/svg" y="0px">
+  <rect class="lr-fy-i-bg" height="296" width="474"></rect>
+  <g id="lr-fy-i-def" style="display:inline">
+    <line class="lr-fy-i-ll" x1="121" x2="353" y1="263" y2="33"></line>
+    <line class="lr-fy-i-dl" x1="353" x2="121" y1="263" y2="263"></line>
+    <line class="lr-fy-i-dl" x1="353" x2="353" y1="32" y2="264"></line>
+    <line class="lr-fy-i-dl" x1="121" x2="353" y1="33" y2="33"></line>
+    <line class="lr-fy-i-dl" x1="121" x2="121" y1="264" y2="32"></line>
+    <rect class="lr-fy-i-bg" height="31" width="36" x="334" y="133"></rect><text class="lr-fy-i-dgf"
+      transform="translate(343,155)">a</text>
+    <rect class="lr-fy-i-bg" height="44.779" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.6351 209.5262)"
+      width="40.771" x="216.205" y="121.766"></rect><text class="lr-fy-i-lgf" transform="translate(227,155)">d</text>
+  </g>
+  <g id="lr-fy-i-back" style="display:none">
+    <line class="lr-fy-i-ll" x1="121" x2="353" y1="263" y2="33"></line>
+    <line class="lr-fy-i-ll" x1="353" x2="121" y1="263" y2="263"></line>
+    <line class="lr-fy-i-ll" x1="353" x2="353" y1="32" y2="264"></line>
+    <line class="lr-fy-i-ll" x1="121" x2="353" y1="33" y2="33"></line>
+    <line class="lr-fy-i-ll" x1="121" x2="121" y1="264" y2="32"></line>
+    <rect class="lr-fy-i-bg" height="31" width="36" x="334" y="133"></rect><text class="lr-fy-i-lgf"
+      transform="translate(343,155)">a</text>
+    <rect class="lr-fy-i-bg" height="44.779" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.6351 209.5262)"
+      width="40.771" x="216.205" y="121.766"></rect><text class="lr-fy-i-lgf" transform="translate(227,155)">d</text>
+  </g>
+  <g id="lr-fy-i-d" style="display:none">
+    <line class="lr-fy-i-ml" x1="121" x2="353" y1="263" y2="33"></line>
+    <rect class="lr-fy-i-bg" height="44.779" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.6351 209.5262)"
+      width="40.771" x="216.205" y="121.766"></rect><text class="lr-fy-i-bf" transform="translate(227,155)">d</text>
+  </g>
+  <g id="lr-fy-i-aa" style="display:none">
+    <line class="lr-fy-i-ml" x1="352" x2="352" y1="33" y2="263"></line>
+    <rect class="lr-fy-i-bg" height="31" width="36" x="334" y="133"></rect><text class="lr-fy-i-bf"
+      transform="translate(343,155)">a</text>
+  </g>
+  <g id="lr-fy-i-P" style="display:none">
+    <line class="lr-fy-i-ml" x1="352" x2="120" y1="262" y2="262"></line>
+    <line class="lr-fy-i-ml" x1="352" x2="352" y1="33" y2="262"></line>
+    <line class="lr-fy-i-ml" x1="120" x2="352" y1="32" y2="32"></line>
+    <line class="lr-fy-i-ml" x1="120" x2="120" y1="262" y2="32"></line>
+    <rect class="lr-fy-i-bg" height="38" width="36" x="334" y="126"></rect><text class="lr-fy-i-bf"
+      transform="translate(343,156)">P</text>
+  </g>
+  <g id="lr-fy-i-A" style="display:none">
+    <polyline style="stroke-width:2px;stroke-miterlimit:10;stroke:#212327" class="lr-fy-i-bg"
+      points="353.547,32.516 353.469,263.469 353.469,263.469 120.484,263.469 120.484,263.469 120.484,32.516 120.484,32.516 353.547,32.516">
+    </polyline>
+    <rect class="lr-fy-i-bg" height="31" width="36" x="334" y="133"></rect><text class="lr-fy-i-lgf"
+      transform="translate(343,155)">a</text>
+    <polyline class="lr-fy-i-tb"
+      points="353.547,32.516 353.469,263.469 353.469,263.469 120.484,263.469 120.484,263.469 120.484,32.516 120.484,32.516 353.547,32.516"
+      style="stroke-linejoin:round"></polyline><text class="lr-fy-i-bf" transform="translate(230,155)">A</text>
+  </g>
+</svg>
