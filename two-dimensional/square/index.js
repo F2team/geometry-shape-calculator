@@ -3,14 +3,16 @@ import {
   calculateSquarePerimeter,
 } from "../../modules/square.js";
 
-const squareAreaElement = document.querySelector("#area");
-const squarePerimeterElement = document.querySelector("#perimeter");
-const errorTextElement = document.querySelector("#error");
+
+const sideLengthElement = document.getElementById("side-length");
+const squareAreaElement = document.getElementById("area");
+const squarePerimeterElement = document.getElementById("perimeter");
+const errorTextElement = document.getElementById("error");
 const formElement = document.querySelector("form");
 
-const appendResultSquarePerimeter = (lengthOfSquare) => {
+const appendResultSquarePerimeter = (sideLength) => {
   try {
-    const resultSquarePerimeter = calculateSquarePerimeter(lengthOfSquare);
+    const resultSquarePerimeter = calculateSquarePerimeter(sideLength);
 
     squarePerimeterElement.innerText = resultSquarePerimeter;
     errorTextElement.innerText = "";
@@ -20,9 +22,9 @@ const appendResultSquarePerimeter = (lengthOfSquare) => {
   }
 };
 
-const appendResultSquareArea = (lengthOfSquare) => {
+const appendResultSquareArea = (sideLength) => {
   try {
-    const resultSquareArea = calculateSquareArea(lengthOfSquare);
+    const resultSquareArea = calculateSquareArea(sideLength);
 
     squareAreaElement.innerText = resultSquareArea;
     errorTextElement.innerText = "";
@@ -36,7 +38,6 @@ formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Get form input
-  const sideLengthElement = document.querySelector("#side-length");
   const sideLength = sideLengthElement.valueAsNumber;
 
   // Append results to the DOM
