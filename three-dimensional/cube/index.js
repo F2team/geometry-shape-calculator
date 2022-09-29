@@ -2,6 +2,7 @@ import { calculateCubeSurfaceArea, calculateCubeVolume } from "./../../modules/c
 
 const volumeOfCube = document.querySelector("#volume");
 const surfaceAreaOfCube = document.querySelector("#surface-area");
+const textError = document.querySelector(".error");
 const formElement = document.querySelector('form');
 
 const insertResultOfCalculateCubeSurfaceAreaToDOM = (lengthOfCube) => {
@@ -9,8 +10,9 @@ const insertResultOfCalculateCubeSurfaceAreaToDOM = (lengthOfCube) => {
     const resultCalculateCubeSurfaceArea = calculateCubeSurfaceArea(lengthOfCube);
 
     surfaceAreaOfCube.innerText = resultCalculateCubeSurfaceArea;
+    textError.innerText = "";
   } catch (error) {
-    console.error(error)
+    textError.innerText = error.message;
     surfaceAreaOfCube.innerHTML = "";
   }
 }
@@ -20,8 +22,9 @@ const insertResultOfCalculateCubeVolumeToDOM = (lengthOfCube) => {
     const resultCalculateCubeVolume = calculateCubeVolume(lengthOfCube);
 
     volumeOfCube.innerText = resultCalculateCubeVolume;
+    textError.innerText = "";
   } catch (error) {
-    console.error(error)
+    textError.innerText = error.message;
     volumeOfCube.innerHTML = "";
   }
 }

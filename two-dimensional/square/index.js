@@ -2,6 +2,7 @@ import { calculateSquareArea, calculateSquarePerimeter } from "./../../modules/s
 
 const areaOfSquare = document.querySelector("#area");
 const perimeterOfSquare = document.querySelector("#perimeter");
+const textError = document.querySelector(".error");
 const formElement = document.querySelector("form");
 
 const insertResultOfCalculateSquarePerimeterToDOM = (lengthOfSquare) => {
@@ -9,8 +10,9 @@ const insertResultOfCalculateSquarePerimeterToDOM = (lengthOfSquare) => {
     const resultCalculateSquarePerimeter = calculateSquarePerimeter(lengthOfSquare);
 
     perimeterOfSquare.innerText = resultCalculateSquarePerimeter;
+    textError.innerText = "";
   } catch (error) {
-    console.error(error)
+    textError.innerText = error.message;
     perimeterOfSquare.innerHTML = "";
   }
 }
@@ -20,8 +22,9 @@ const insertResultOfCalculateSquareAreaToDOM = (lengthOfSquare) => {
     const resultCalculateSquareArea = calculateSquareArea(lengthOfSquare);
 
     areaOfSquare.innerText = resultCalculateSquareArea;
+    textError.innerText = "";
   } catch (error) {
-    console.error(error)
+    textError.innerText = error.message;
     areaOfSquare.innerHTML = "";
   }
 }
