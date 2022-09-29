@@ -1,45 +1,39 @@
-const lengthOfSquare = document.querySelector("#length-of-square");
+import { calculateSquareArea, calculateSquarePerimeter } from "./../../modules/square.js";
+
 const areaOfSquare = document.querySelector("#area");
 const perimeterOfSquare = document.querySelector("#perimeter");
+const textError = document.querySelector(".error");
 const formElement = document.querySelector("form");
 
-function calculateSquarePerimeter(lengthOfSquare) {
+const insertResultOfCalculateSquarePerimeterToDOM = (lengthOfSquare) => {
   try {
-    if (!lengthOfSquare) {
-      throw new Error("Length of square is required");
-    }
-    if (typeof lengthOfSquare !== "number") {
-      throw new Error("Length of square has to be a number");
-    }
-    return 4 * lengthOfSquare;
+    const resultCalculateSquarePerimeter = calculateSquarePerimeter(lengthOfSquare);
+
+    perimeterOfSquare.innerText = resultCalculateSquarePerimeter;
+    textError.innerText = "";
   } catch (error) {
-    console.error(error);
-    alert(error.message);
-    return 0;
+    textError.innerText = error.message;
+    perimeterOfSquare.innerHTML = "";
   }
 }
 
-function calculateArea(lengthOfSquare) {
-  return lengthOfSquare ** 2;
+const insertResultOfCalculateSquareAreaToDOM = (lengthOfSquare) => {
+  try {
+    const resultCalculateSquareArea = calculateSquareArea(lengthOfSquare);
+
+    areaOfSquare.innerText = resultCalculateSquareArea;
+    textError.innerText = "";
+  } catch (error) {
+    textError.innerText = error.message;
+    areaOfSquare.innerHTML = "";
+  }
 }
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
+  const lengthOfSquare = Number(document.querySelector("#length-of-square").value);
 
-  try {
-    const resultcalculateSquarePerimeter = calculateSquarePerimeter(
-      lengthOfSquare.value
-    );
-    const resultCalculateArea = calculateArea(lengthOfSquare.value);
+  insertResultOfCalculateSquarePerimeterToDOM(lengthOfSquare);
 
-    if (!resultcalculateSquarePerimeter) {
-      throw new Error("Perimeter reseult is not available");
-    }
-
-    areaOfSquare.innerText = resultCalculateArea;
-    perimeterOfSquare.innerText = resultcalculateSquarePerimeter;
-  } catch (error) {
-    console.error(error);
-    alert("Perimeter reseult is not available");
-  }
+  insertResultOfCalculateSquareAreaToDOM(lengthOfSquare);
 });

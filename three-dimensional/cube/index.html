@@ -18,9 +18,11 @@
           type="number"
           id="length-of-cube"
           placeholder="Length...."
+          step="any"
           required
         />
         <div>
+          <p class="error"></p>
           <button class="form-button" type="submit">Calculate</button>
         </div>
       </form>
@@ -39,6 +41,6 @@
         </div>
       </div>
     </div>
-    <script src="/three-dimensional/cube/index.js"></script>
+    <script type="module" src="/three-dimensional/cube/index.js"></script>
   </body>
 </html>
