@@ -1,39 +1,45 @@
-import { calculateSquareArea, calculateSquarePerimeter } from "./../../modules/square.js";
+import {
+  calculateSquareArea,
+  calculateSquarePerimeter,
+} from "../../modules/square.js";
 
-const areaOfSquare = document.querySelector("#area");
-const perimeterOfSquare = document.querySelector("#perimeter");
-const textError = document.querySelector(".error");
+const squareAreaElement = document.querySelector("#area");
+const squarePerimeterElement = document.querySelector("#perimeter");
+const errorTextElement = document.querySelector("#error");
 const formElement = document.querySelector("form");
 
-const insertResultOfCalculateSquarePerimeterToDOM = (lengthOfSquare) => {
+const appendResultSquarePerimeter = (lengthOfSquare) => {
   try {
-    const resultCalculateSquarePerimeter = calculateSquarePerimeter(lengthOfSquare);
+    const resultSquarePerimeter = calculateSquarePerimeter(lengthOfSquare);
 
-    perimeterOfSquare.innerText = resultCalculateSquarePerimeter;
-    textError.innerText = "";
+    squarePerimeterElement.innerText = resultSquarePerimeter;
+    errorTextElement.innerText = "";
   } catch (error) {
-    textError.innerText = error.message;
-    perimeterOfSquare.innerHTML = "";
+    errorTextElement.innerText = error.message;
+    squarePerimeterElement.innerHTML = "";
   }
-}
+};
 
-const insertResultOfCalculateSquareAreaToDOM = (lengthOfSquare) => {
+const appendResultSquareArea = (lengthOfSquare) => {
   try {
-    const resultCalculateSquareArea = calculateSquareArea(lengthOfSquare);
+    const resultSquareArea = calculateSquareArea(lengthOfSquare);
 
-    areaOfSquare.innerText = resultCalculateSquareArea;
-    textError.innerText = "";
+    squareAreaElement.innerText = resultSquareArea;
+    errorTextElement.innerText = "";
   } catch (error) {
-    textError.innerText = error.message;
-    areaOfSquare.innerHTML = "";
+    errorTextElement.innerText = error.message;
+    squareAreaElement.innerHTML = "";
   }
-}
+};
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
-  const lengthOfSquare = Number(document.querySelector("#length-of-square").value);
 
-  insertResultOfCalculateSquarePerimeterToDOM(lengthOfSquare);
+  // Get form input
+  const sideLengthElement = document.querySelector("#side-length");
+  const sideLength = sideLengthElement.valueAsNumber;
 
-  insertResultOfCalculateSquareAreaToDOM(lengthOfSquare);
+  // Append results to the DOM
+  appendResultSquarePerimeter(sideLength);
+  appendResultSquareArea(sideLength);
 });

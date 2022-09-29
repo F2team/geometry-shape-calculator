@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="/assets/css/modern-normalize.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
+
   <body>
     <h1 class="title-page">Square Calculator</h1>
+
     <div class="calculate-container">
       <form class="form-container">
         <h2 class="form-title">Input:</h2>
-        <label for="length-of-square"> enter length of the square: </label>
+        <label for="side-length"> enter length of the square: </label>
         <input
+          id="side-length"
           type="number"
-          id="length-of-square"
           placeholder="Length...."
           step="any"
           required
         />
         <div>
-          <p class="error"></p>
+          <p id="error" class="error"></p>
           <button class="form-button" type="submit">Calculate</button>
         </div>
       </form>
+
       <div class="result-container">
         <div class="result-img-container">
           <img src="/assets/images/square-detail.png" alt="Square" />
@@ -41,6 +44,7 @@
         </div>
       </div>
     </div>
+
     <script type="module" src="/two-dimensional/square/index.js"></script>
   </body>
 </html>
