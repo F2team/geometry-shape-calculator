@@ -1,23 +1,25 @@
-const radiusOfCircumference = document.querySelector("#radius-of-circle");
-const areaOfCircle = document.querySelector("#area");
-const circumferenceOfCircle = document.querySelector("#circumference");
+import { calculateCircumference, calculateArea } from "../../modules/circle.js";
+
+const circleRadius = document.querySelector("#radius-of-circle");
+const circleArea = document.querySelector("#area");
+const circleCircumference = document.querySelector("#circumference");
 const formElement = document.querySelector("form");
 
-function calculateCircumference(radiusOfCircumference) {
-  return 2 * 3.14 * radiusOfCircumference;
-}
+const resultCalculateArea = calculateArea(radiusOfCircle.value);
 
-function calculateArea(radiusOfCircumference) {
-  return 3.14 * radiusOfCircumference ** 2;
-}
+circleArea.innerText = resultCalculateArea;
+
+const resultCalculateCircumference = calculateCircumference(
+  radiusOfCircle.value
+);
+
+circleCircumference.innerText = resultCalculateCircumference;
 
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
-  const resultCalculateCircumference = calculateCircumference(
-    radiusOfCircumference.value
-  );
-  const resultCalculateArea = calculateArea(radiusOfCircumference.value);
 
-  areaOfCircle.innerText = resultCalculateArea;
-  circumferenceOfCircle.innerText = resultCalculateCircumference;
+  const radiusOfCircle = circleRadius.valueAsNumber;
+
+  resultCalculateArea(radiusOfCircle);
+  resultCalculateCircumference(radiusOfCircle);
 });
