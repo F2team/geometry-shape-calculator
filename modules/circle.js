@@ -1,7 +1,7 @@
-export const calculateCircumference = (radiusOfCircle) => {
+export function calculateCircumference(radiusOfCircle) {
   return 2 * Math.PI * radiusOfCircle;
-};
+}
 
-export const calculateArea = (radiusOfCircle) => {
+export function calculateArea(radiusOfCircle) {
   return Math.PI * radiusOfCircle ** 2;
-};
+}
