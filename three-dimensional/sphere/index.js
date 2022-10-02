@@ -1,7 +1,7 @@
 import {
   calculateVolumeSphere,
   calculateSurfaceAreaSphere,
-} from "../../modules/sphere";
+} from "../../modules/sphere.js";
 
 const sphereRadiusElement = document.getElementById("radius-of-sphere");
 const sphereSurfaceAreaElement = document.getElementById("surface-area");
